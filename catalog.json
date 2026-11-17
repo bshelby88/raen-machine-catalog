@@ -1,0 +1,299 @@
+{
+ "generated": "2026-11-16T23:35:00-06:00",
+ "payTo": "0x9b8a27e03CEbA490953cDa8AB1291c0E13bAf72f",
+ "network": "eip155:8453",
+ "services": [
+  {
+   "service": "briefsnap",
+   "description": "Pay USDC, get instant AI summaries, action item extraction, and simplified explanations of any document or text.",
+   "contact": "jadedfocus@gmail.com",
+   "manifest_url": "https://briefsnap-x402.fly.dev/.well-known/x402.json",
+   "base_url": "https://briefsnap-x402.fly.dev"
+  },
+  {
+   "service": "contract-eye",
+   "description": "Pay $0.05 USDC, get a detailed risk analysis of any contract text. Flags risky, one-sided, or unusual clauses. OUTPUT QUALITY: if LLM analysis is unavailable, the response is a deterministic rule-based clause scan (response fields method + delivery_mode disclose this) \u2014 pattern-based flagging, not model review.",
+   "contact": "jadedfocus@gmail.com",
+   "manifest_url": "https://contract-eye-x402.fly.dev/.well-known/x402.json",
+   "base_url": "https://contract-eye-x402.fly.dev"
+  },
+  {
+   "service": "dispatch",
+   "description": "Route a natural-language agent intent to the right paid fleet service. POST your intent, receive the chosen service, confidence score, extracted params, and a ready-to-use request as JSON. $0.50 per call, Base USDC x402.",
+   "contact": "jadedfocus@gmail.com",
+   "manifest_url": "https://dispatch-x402.fly.dev/.well-known/x402.json",
+   "base_url": "https://dispatch-x402.fly.dev"
+  },
+  {
+   "service": "dispute-forge",
+   "description": "Pay $0.10 USDC, get an FCRA-compliant dispute letter and unique on-chain certificate.",
+   "contact": "jadedfocus@gmail.com",
+   "manifest_url": "https://dispute-forge-x402.fly.dev/.well-known/x402.json",
+   "base_url": "https://dispute-forge-x402.fly.dev"
+  },
+  {
+   "service": "escrow",
+   "description": "Agent-to-agent USDC escrow on Base mainnet. 1% fee. Timeout-refundable.",
+   "contact": "jadedfocus@gmail.com",
+   "manifest_url": "https://escrow-x402.fly.dev/.well-known/x402.json",
+   "base_url": "https://escrow-x402.fly.dev"
+  },
+  {
+   "service": "nanobanana-x402",
+   "description": "Paid Gemini image generation and image editing API. Pay USDC on Base and receive base64 PNG output.",
+   "contact": "jadedfocus@gmail.com",
+   "manifest_url": "/.well-known/x402.json",
+   "base_url": null
+  },
+  {
+   "service": "nft-alpha-x402",
+   "description": "NFT Alpha OpenSea market signals for NFT listings, sales, bids, floor price, and bid frenzy. Get live OpenSea market signals for watched NFT collections on Base: listings, sales, bids, floor pressure, sell-through, bid frenzy. POST collection slug(s), get 5-minute signal JSON. $0.02 per call, Base USDC x402.",
+   "contact": "jadedfocus@gmail.com",
+   "manifest_url": "/.well-known/x402.json",
+   "base_url": null
+  },
+  {
+   "service": "royal-ruby-x402",
+   "description": "Paid US consumer-rights law citation lookup API. Returns structured FCRA, FDCPA, TILA, state UDAP, reporting timeline, and statute-of-limitations research. Information only, not legal advice. MACHINE-VOLUME TIER (Nov 16): add \"bulk\": 100-500 to the JSON body to request that many citations in ONE call at $0.001/citation (min 100 = $0.10/call) instead of $0.05 \u2014 the 402 challenge you receive will sh",
+   "contact": "jadedfocus@gmail.com",
+   "manifest_url": "/.well-known/x402.json",
+   "base_url": null
+  },
+  {
+   "service": "sentry-forge",
+   "description": "Turn one third-party collection notice into eight review-ready dispute documents for $5.00 USDC. No subscription; self-service document preparation only.",
+   "contact": "jadedfocus@gmail.com",
+   "manifest_url": "https://sentry-forge-x402.fly.dev/.well-known/x402.json",
+   "base_url": "https://sentry-forge-x402.fly.dev"
+  },
+  {
+   "service": "tradingagents",
+   "description": "Pay $0.05 USDC per request for the current synthetic degraded demonstration payload. Without real mode enabled this route serves a synthetic degraded demo payload; when real mode is enabled it returns a live multi-agent TradingAgents report. Never financial advice. The response is not market research.",
+   "contact": "jadedfocus@gmail.com",
+   "manifest_url": "https://tradingagents-x402.fly.dev/.well-known/x402.json",
+   "base_url": "https://tradingagents-x402.fly.dev"
+  },
+  {
+   "service": "vault-pro-x402",
+   "description": "Paid Obsidian project and agent scaffolding API. Pay USDC on Base and receive ready-to-paste markdown.",
+   "contact": "jadedfocus@gmail.com",
+   "manifest_url": "/.well-known/x402.json",
+   "base_url": null
+  }
+ ],
+ "endpoints": [
+  {
+   "service": "briefsnap",
+   "route": "/api/summarize",
+   "method": "POST",
+   "description": "Summarize a document or text with bullets, paragraph, or executive format. POST {text, format?}, receive the summary as JSON. $1.00 per call, Base USDC x402.",
+   "price": "$1.00",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03CEbA490953cDa8AB1291c0E13bAf72f",
+   "url": "https://briefsnap-x402.fly.dev/api/summarize"
+  },
+  {
+   "service": "briefsnap",
+   "route": "/api/extract-actions",
+   "method": "POST",
+   "description": "Extract action items, decisions, and deadlines from meeting notes or text. POST {text}, receive a structured list as JSON. $1.50 per call, Base USDC x402.",
+   "price": "$1.50",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03CEbA490953cDa8AB1291c0E13bAf72f",
+   "url": "https://briefsnap-x402.fly.dev/api/extract-actions"
+  },
+  {
+   "service": "briefsnap",
+   "route": "/api/eli5",
+   "method": "POST",
+   "description": "Get a simplified plain-English explanation of complex text. POST {text}, receive an ELI5 version as JSON. $1.00 per call, Base USDC x402.",
+   "price": "$1.00",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03CEbA490953cDa8AB1291c0E13bAf72f",
+   "url": "https://briefsnap-x402.fly.dev/api/eli5"
+  },
+  {
+   "service": "briefsnap",
+   "route": "/api/compare-docs",
+   "method": "POST",
+   "description": "Compare two documents side by side. POST {doc_a, doc_b}, receive structured differences as JSON. $3.00 per call, Base USDC x402.",
+   "price": "$3.00",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03CEbA490953cDa8AB1291c0E13bAf72f",
+   "url": "https://briefsnap-x402.fly.dev/api/compare-docs"
+  },
+  {
+   "service": "contract-eye",
+   "route": "/api/analyze-contract",
+   "method": "POST",
+   "description": "Analyze contract text for risky, one-sided, or unusual clauses. POST {text, focus?}, receive risk score, flagged clauses with severity/explanation/suggested edits as JSON. $0.05 per call, Base USDC x402.",
+   "price": "$0.05",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03CEbA490953cDa8AB1291c0E13bAf72f",
+   "url": "https://contract-eye-x402.fly.dev/api/analyze-contract"
+  },
+  {
+   "service": "contract-eye",
+   "route": "/contract/analyze",
+   "method": "POST",
+   "description": "Analyze contract text for risky, one-sided, or unusual clauses. POST {text, focus?}, receive risk score, flagged clauses with severity/explanation/suggested edits as JSON. $0.05 per call, Base USDC x402.",
+   "price": "$0.05",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03CEbA490953cDa8AB1291c0E13bAf72f",
+   "url": "https://contract-eye-x402.fly.dev/contract/analyze"
+  },
+  {
+   "service": "dispatch",
+   "route": "/dispatch",
+   "method": "POST",
+   "description": "Route a natural-language agent intent to the right paid fleet service. POST your intent, receive the chosen service, confidence score, extracted params, and a ready-to-use request as JSON. $0.50 per call, Base USDC x402.",
+   "price": "$0.50",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03CEbA490953cDa8AB1291c0E13bAf72f",
+   "url": "https://dispatch-x402.fly.dev/dispatch"
+  },
+  {
+   "service": "dispute-forge",
+   "route": "/api/dispute-pack",
+   "method": "POST",
+   "description": "Generate an FCRA-compliant dispute letter and on-chain certificate on Base. POST {creditor, reason}, receive letter_body, cert_svg, timestamp, signature as JSON. $0.10 per call, Base USDC x402.",
+   "price": "$0.10",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03CEbA490953cDa8AB1291c0E13bAf72f",
+   "url": "https://dispute-forge-x402.fly.dev/api/dispute-pack"
+  },
+  {
+   "service": "escrow",
+   "route": "/api/escrow/create",
+   "method": "POST",
+   "description": "Create agent-to-agent USDC escrow on Base mainnet. POST {agentB, amountUsdc, task, timeoutHours?}, receive {jobId, txHash, timeoutAt}. 1% release fee, timeout-refundable. $0.05 per create, Base USDC x402.",
+   "price": "$0.05",
+   "network": "eip155:8453",
+   "payTo": "0x9B8a27e03CEbA490953cDa8AB1291c0E13bAf72f",
+   "url": "https://escrow-x402.fly.dev/api/escrow/create"
+  },
+  {
+   "service": "nanobanana-x402",
+   "route": "/api/generate-image",
+   "method": "POST",
+   "description": "Generate an AI image from a text prompt on Base. POST the prompt and optional aspectRatio, receive a base64 PNG as JSON. $0.01 per call, Base USDC x402.",
+   "price": "$0.01",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03ceba490953cda8ab1291c0e13baf72f"
+  },
+  {
+   "service": "nanobanana-x402",
+   "route": "/api/edit-image",
+   "method": "POST",
+   "description": "Edit an existing image with a natural-language prompt. POST source image base64 + prompt, receive the edited base64 PNG as JSON. $0.01 per call, Base USDC x402.",
+   "price": "$0.01",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03ceba490953cda8ab1291c0e13baf72f"
+  },
+  {
+   "service": "nft-alpha-x402",
+   "route": "/api/nft-signal",
+   "method": "POST",
+   "description": "Get live OpenSea market signals for watched NFT collections on Base: listings, sales, bids, floor pressure, sell-through, bid frenzy. POST collection slug(s), get 5-minute signal JSON. $0.02 per call, Base USDC x402.",
+   "price": "$0.02",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03ceba490953cda8ab1291c0e13baf72f"
+  },
+  {
+   "service": "royal-ruby-x402",
+   "route": "/api/law-lookup",
+   "method": "POST",
+   "description": "Look up US federal and state consumer-protection law citations on a topic. Returns FCRA / FDCPA / TILA / state UDAP statutes with formal citations, plain-English summaries, key provisions, reporting timelines, statute of limitations, and required doc",
+   "price": null,
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03ceba490953cda8ab1291c0e13baf72f"
+  },
+  {
+   "service": "royal-ruby-x402",
+   "route": "/api/ping",
+   "method": "GET",
+   "description": "Cheapest alive-check in the x402 ecosystem: GET /api/ping for $0.001 USDC on Base and receive {status:'alive', block, latency_ms, catalog_url} \u2014 the current Base block number, response latency, and this service's x402 manifest URL. Built for crawlers",
+   "price": "$0.001",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03ceba490953cda8ab1291c0e13baf72f"
+  },
+  {
+   "service": "royal-ruby-x402",
+   "route": "/api/udap-citations",
+   "method": "GET",
+   "description": "FREE (no payment required): the 10 most-cited US state UDAP statutes with exact citations as JSON. General legal information, not legal advice. Plain-English page: https://raen-udap-explorer.vercel.app. Upgrade path: paid POST /api/law-lookup ($0.05,",
+   "price": null,
+   "network": null,
+   "payTo": null
+  },
+  {
+   "service": "sentry-forge",
+   "route": "/api/dispute-pack",
+   "method": "GET",
+   "description": "Turn a third-party debt-collection notice into an 8-file review-ready validation and complaint pack. Get markdown docs (collector letter, CFPB drafts, bureau outlines, checklists) as JSON. $5.00 per call, Base USDC x402.",
+   "price": "$5.00",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03ceba490953cda8ab1291c0e13baf72f",
+   "url": "https://sentry-forge-x402.fly.dev/api/dispute-pack"
+  },
+  {
+   "service": "tradingagents",
+   "route": "/api/analyze-arbitrage",
+   "method": "POST",
+   "description": "Request a synthetic BlockRun arbitrage-consensus demo for a ticker. POST {ticker}, receive a synthetic degraded payload; no live market data, not financial advice. $0.05 per call, Base USDC x402.",
+   "price": "$0.05",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03ceba490953cda8ab1291c0e13baf72f",
+   "url": "https://tradingagents-x402.fly.dev/api/analyze-arbitrage"
+  },
+  {
+   "service": "tradingagents",
+   "route": "/api/analyze-ticker",
+   "method": "POST",
+   "description": "Request a ticker market-consensus report. POST {ticker, date?, analysts?}, receive a multi-agent TradingAgents report (real mode) or an honest 503 when real analysis is unavailable \u2014 synthetic output is never sold. Not financial advice. $0.05 per cal",
+   "price": "$0.05",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03ceba490953cda8ab1291c0e13baf72f",
+   "url": "https://tradingagents-x402.fly.dev/api/analyze-ticker"
+  },
+  {
+   "service": "vault-pro-x402",
+   "route": "/api/scaffold-project",
+   "method": "POST",
+   "description": "Scaffold a complete Obsidian project plan from a one-line brief on Base. POST {goal, ...}, receive markdown with frontmatter, success criteria, scope, and decomposition table as JSON. $0.05 per call, Base USDC x402.",
+   "price": "$0.05",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03ceba490953cda8ab1291c0e13baf72f"
+  },
+  {
+   "service": "vault-pro-x402",
+   "route": "/api/scaffold-agent",
+   "method": "POST",
+   "description": "Scaffold an Obsidian agent definition from role + goal brief. POST {role, goal, tools_hint?}, receive markdown with role, tools, process steps, and invocation prompt as JSON. $0.05 per call, Base USDC x402.",
+   "price": "$0.05",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03ceba490953cda8ab1291c0e13baf72f"
+  },
+  {
+   "service": "raen-mcp-gateway",
+   "route": "/mcp (tools/call)",
+   "method": "POST",
+   "url": "https://raen-mcp-gateway.fly.dev/mcp",
+   "description": "Paid MCP gate: tools/list is open for discovery; tools/call returns an x402 402 challenge ($0.05, EIP-3009). MCP-native agents pay without leaving the MCP protocol.",
+   "price": "$0.05",
+   "network": "eip155:8453",
+   "payTo": "0x9b8a27e03CEbA490953cDa8AB1291c0E13bAf72f"
+  }
+ ],
+ "how_to_pay": {
+  "protocol": "x402 v1 (EIP-3009 transferWithAuthorization)",
+  "network": "Base (eip155:8453)",
+  "token": "USDC 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+  "facilitator": "https://raen-facilitator.fly.dev/facilitator",
+  "flow": "POST the endpoint -> receive 402 with payment-required header -> sign EIP-3009 -> retry with X-PAYMENT header -> 200 + settle tx on Base."
+ },
+ "free_tier": {
+  "royal-ruby": "GET /api/udap-citations free; first paid call rebated (charge-and-rebate) with x-payer-address header",
+  "guide": "https://bshelby88.github.io/raen-first-call-free/"
+ }
+}
