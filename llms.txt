@@ -1,0 +1,37 @@
+# RAEN x402 Machine Catalog
+
+Autonomous-agent-payable APIs on Base (USDC, x402 protocol, payTo 0x9b8a27e03CEbA490953cDa8AB1291c0E13bAf72f).
+Machine-readable catalog: https://bshelby88.github.io/raen-machine-catalog/catalog.json
+
+## briefsnap — Pay USDC, get instant AI summaries, action item extraction, and simplified explanations of any document or text.
+## contract-eye — Pay $0.05 USDC, get a detailed risk analysis of any contract text. Flags risky, one-sided, or unusual clauses. OUTPUT QU
+## dispatch — Route a natural-language agent intent to the right paid fleet service. POST your intent, receive the chosen service, con
+## dispute-forge — Pay $0.10 USDC, get an FCRA-compliant dispute letter and unique on-chain certificate.
+## escrow — Agent-to-agent USDC escrow on Base mainnet. 1% fee. Timeout-refundable.
+## nanobanana-x402 — Paid Gemini image generation and image editing API. Pay USDC on Base and receive base64 PNG output.
+## nft-alpha-x402 — NFT Alpha OpenSea market signals for NFT listings, sales, bids, floor price, and bid frenzy. Get live OpenSea market sig
+## royal-ruby-x402 — Paid US consumer-rights law citation lookup API. Returns structured FCRA, FDCPA, TILA, state UDAP, reporting timeline, a
+## sentry-forge — Turn one third-party collection notice into eight review-ready dispute documents for $5.00 USDC. No subscription; self-s
+## tradingagents — Pay $0.05 USDC per request for the current synthetic degraded demonstration payload. Without real mode enabled this rout
+## vault-pro-x402 — Paid Obsidian project and agent scaffolding API. Pay USDC on Base and receive ready-to-paste markdown.
+- POST https://briefsnap-x402.fly.dev/api/summarize | $1.00 | briefsnap | Summarize a document or text with bullets, paragraph, or executive format. POST {text, format?}, receive the s
+- POST https://briefsnap-x402.fly.dev/api/extract-actions | $1.50 | briefsnap | Extract action items, decisions, and deadlines from meeting notes or text. POST {text}, receive a structured l
+- POST https://briefsnap-x402.fly.dev/api/eli5 | $1.00 | briefsnap | Get a simplified plain-English explanation of complex text. POST {text}, receive an ELI5 version as JSON. $1.0
+- POST https://briefsnap-x402.fly.dev/api/compare-docs | $3.00 | briefsnap | Compare two documents side by side. POST {doc_a, doc_b}, receive structured differences as JSON. $3.00 per cal
+- POST https://contract-eye-x402.fly.dev/api/analyze-contract | $0.05 | contract-eye | Analyze contract text for risky, one-sided, or unusual clauses. POST {text, focus?}, receive risk score, flagg
+- POST https://contract-eye-x402.fly.dev/contract/analyze | $0.05 | contract-eye | Analyze contract text for risky, one-sided, or unusual clauses. POST {text, focus?}, receive risk score, flagg
+- POST https://dispatch-x402.fly.dev/dispatch | $0.50 | dispatch | Route a natural-language agent intent to the right paid fleet service. POST your intent, receive the chosen se
+- POST https://dispute-forge-x402.fly.dev/api/dispute-pack | $0.10 | dispute-forge | Generate an FCRA-compliant dispute letter and on-chain certificate on Base. POST {creditor, reason}, receive l
+- POST https://escrow-x402.fly.dev/api/escrow/create | $0.05 | escrow | Create agent-to-agent USDC escrow on Base mainnet. POST {agentB, amountUsdc, task, timeoutHours?}, receive {jo
+- POST /api/generate-image | $0.01 | nanobanana-x402 | Generate an AI image from a text prompt on Base. POST the prompt and optional aspectRatio, receive a base64 PN
+- POST /api/edit-image | $0.01 | nanobanana-x402 | Edit an existing image with a natural-language prompt. POST source image base64 + prompt, receive the edited b
+- POST /api/nft-signal | $0.02 | nft-alpha-x402 | Get live OpenSea market signals for watched NFT collections on Base: listings, sales, bids, floor pressure, se
+- POST /api/law-lookup | free | royal-ruby-x402 | Look up US federal and state consumer-protection law citations on a topic. Returns FCRA / FDCPA / TILA / state
+- GET /api/ping | $0.001 | royal-ruby-x402 | Cheapest alive-check in the x402 ecosystem: GET /api/ping for $0.001 USDC on Base and receive {status:'alive',
+- GET /api/udap-citations | free | royal-ruby-x402 | FREE (no payment required): the 10 most-cited US state UDAP statutes with exact citations as JSON. General leg
+- GET https://sentry-forge-x402.fly.dev/api/dispute-pack | $5.00 | sentry-forge | Turn a third-party debt-collection notice into an 8-file review-ready validation and complaint pack. Get markd
+- POST https://tradingagents-x402.fly.dev/api/analyze-arbitrage | $0.05 | tradingagents | Request a synthetic BlockRun arbitrage-consensus demo for a ticker. POST {ticker}, receive a synthetic degrade
+- POST https://tradingagents-x402.fly.dev/api/analyze-ticker | $0.05 | tradingagents | Request a ticker market-consensus report. POST {ticker, date?, analysts?}, receive a multi-agent TradingAgents
+- POST /api/scaffold-project | $0.05 | vault-pro-x402 | Scaffold a complete Obsidian project plan from a one-line brief on Base. POST {goal, ...}, receive markdown wi
+- POST /api/scaffold-agent | $0.05 | vault-pro-x402 | Scaffold an Obsidian agent definition from role + goal brief. POST {role, goal, tools_hint?}, receive markdown
+- POST https://raen-mcp-gateway.fly.dev/mcp | $0.05 | raen-mcp-gateway | Paid MCP gate: tools/list is open for discovery; tools/call returns an x402 402 challenge ($0.05, EIP-3009). M
